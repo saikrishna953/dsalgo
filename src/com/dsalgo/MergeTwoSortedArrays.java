@@ -17,27 +17,19 @@ public class MergeTwoSortedArrays {
 
     }
 
-    //brute force
     private static void merge(int[] arr1, int[] arr2) {
         int m = arr1.length;
-        int n = arr2.length;
-        // Iterate through all elements of ar2[] starting from
-        // the last element
-        for (int i=n-1; i>=0; i--)
+        int n = arr1.length;
+        for (int i=0; i<m; i++)
         {
-            /* Find the smallest element greater than ar2[i]. Move all
-               elements one position ahead till the smallest greater
-               element is not found */
-            int j, last = arr1[m-1];
-            for (j=m-2; j >= 0 && arr1[j] > arr2[i]; j--)
-                arr1[j+1] = arr1[j];
-
-            // If there was a greater element
-            if (j != m-2 || last > arr2[i])
-            {
-                arr1[j+1] = arr2[i];
-                arr2[i] = last;
+            int curr = arr1[i];
+            if(arr1[i] > arr2[0] ){
+                int arr20 = arr2[0];
+                arr2[0] = curr;
+                arr1[i] = arr20;
+                Arrays.sort(arr2);
             }
+
         }
     }
 }

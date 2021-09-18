@@ -19,7 +19,6 @@ public class MergeTwoSortedArrays {
 
     private static void merge(int[] arr1, int[] arr2) {
         int m = arr1.length;
-        int n = arr1.length;
         for (int i=0; i<m; i++)
         {
             int curr = arr1[i];

@@ -59,6 +59,12 @@ public class InversionOfArray {
                 arr[k++] = left[i++];
             else {
                 arr[k++] = right[j++];
+             //How to get the number of inversions in merge()?
+             //In merge process, let i is used for indexing left sub-array
+             // and j for right sub-array. At any step in merge(), if a[i] is greater than a[j],
+             // then there are (mid – i) inversions. because left and right subarrays are sorted,
+             // so all the remaining elements in left-subarray (a[i+1], a[i+2] … a[mid]) will be greater
+                // than a[j]
                 swaps += (m + 1) - (l + i);
             }
         }

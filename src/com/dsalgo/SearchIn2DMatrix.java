@@ -11,28 +11,28 @@ public class SearchIn2DMatrix {
         }
 
         //leet code approach. Only if first element of each row is greater than last element of previous row
-        if (!leetCodeSearchIn2DMatrix(matrix, number)){
+        if (!leetCodeSearchIn2DMatrix(matrix, number)) {
             System.out.println("leet code Number not found");
         }
 
     }
 
-    private static boolean leetCodeSearchIn2DMatrix(int[][] matrix, int number) {
+    private static boolean leetCodeSearchIn2DMatrix(int[][] matrix, int target) {
 
         if (matrix.length == 0) return false;
-        int n = matrix.length;
-        int m = matrix[0].length;
-        int low = 0, high = (n * m - 1);
-        while (low <= high) {
-            int mid = (low + (high - low)/ 2);
-            int x = matrix[mid / m][mid % m];
-            if (x == number) {
-                System.out.println("leet code Number found");
-                return true;
-            } else if (number > x) {
-                low = mid + 1;
-            } else {
-                high = mid - 1;
+        int colLength = matrix[0].length - 1; // each row length
+        for (int i = 0; i < matrix.length; i++) { // iterate over every row
+            if (target > matrix[i][colLength])
+                continue; // if target is greater than the highest number in that row then skip that row
+
+            int start = 0, end = colLength;
+            while (start <= end) { // using binary search algorithm to search through the row for the target
+                int mid = start + (end - start) / 2;
+                System.out.println(mid);
+                if (matrix[i][mid] == target) return true;
+
+                if (matrix[i][mid] > target) end = mid - 1;
+                else if (matrix[i][mid] < target) start = mid + 1;
             }
         }
         return false;

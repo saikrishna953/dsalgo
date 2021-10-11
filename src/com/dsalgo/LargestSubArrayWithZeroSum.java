@@ -10,6 +10,7 @@ public class LargestSubArrayWithZeroSum {
         System.out.println("Largest Sub array with zero sum:" + ans);
     }
 
+    //o(N log N)
     private static int findLargestSubArrayWithZeroSum(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<>();
         int max = 0;

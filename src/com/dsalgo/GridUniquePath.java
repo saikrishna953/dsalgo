@@ -1,9 +1,5 @@
 package com.dsalgo;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class GridUniquePath {
     public static void main(String[] args) {
         int n = 2;
@@ -30,17 +26,17 @@ public class GridUniquePath {
 
     private static int findNumberOfWaysOptimal(int n, int m) {
 
-        int N = m+n-2;
-        int r = m-1;
+        int N = m + n - 2;
+        int r = m - 1;
         double res = 1;
         for (int i = 1; i <= r; i++) {
-            res = res * (N-r+i)/i;
+            res = res * (N - r + i) / i;
         }
         return (int) res;
     }
 
     private static int findNumberOfWaysDp(int i, int j, int n, int m, int[][] dp) {
-        if (i == n-1 && j == m-1) {
+        if (i == n - 1 && j == m - 1) {
             return 1;
         } else if (i >= n || j >= m) {
             return 0;
@@ -56,7 +52,7 @@ public class GridUniquePath {
 
     private static int findNumberOfWaysBruteForce(int i, int j, int n, int m) {
 
-        if (i == n-1 && j == m-1) {
+        if (i == n - 1 && j == m - 1) {
             return 1;
         } else if (i >= n || j >= m) {
             return 0;

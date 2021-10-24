@@ -13,7 +13,6 @@ public class MergeTwoSortedLinkedLists {
         linkedListNode2.next.next = new Node(9);
 
         Node mergedList = merge(linkedListNode1, linkedListNode2);
-        ;
         while (mergedList != null) {
             System.out.println(mergedList.val);
             mergedList = mergedList.next;

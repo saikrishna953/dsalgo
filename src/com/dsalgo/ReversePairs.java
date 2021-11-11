@@ -57,7 +57,7 @@ public class ReversePairs {
         }
 
         for (int i = l; i <= h; i++) {
-            nums[i] = arr.get(i-l);
+            nums[i] = arr.get(i - l);
         }
 
         return cnt;

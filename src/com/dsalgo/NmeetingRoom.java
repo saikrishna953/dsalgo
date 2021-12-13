@@ -6,6 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 
 //https://practice.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1
+//Same type problem-Activity selection
 public class NmeetingRoom {
 
     public static void main(String[] args) {

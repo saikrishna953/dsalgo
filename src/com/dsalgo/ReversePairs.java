@@ -13,6 +13,7 @@ public class ReversePairs {
     }
 
     private static int findNumberOfReversePairs(int[] nums) {
+
         return mergeSort(nums, 0, nums.length - 1);
     }
 

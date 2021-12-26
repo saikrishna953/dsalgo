@@ -61,6 +61,7 @@ public class NmeetingRoom {
                 return -1;
             } else if (o1.finish > o2.finish) {
                 return 1;
+                //if the finishing times are same, position of the meeting takes precedence
             } else if (o1.pos < o2.pos) {
                 return -1;
             } else {

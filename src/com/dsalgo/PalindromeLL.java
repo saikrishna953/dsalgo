@@ -8,7 +8,7 @@ public class PalindromeLL {
         linkedListNode1.next.next = new Node(3);
         linkedListNode1.next.next.next = new Node(3);
         linkedListNode1.next.next.next.next = new Node(2);
-        linkedListNode1.next.next.next.next.next = new Node(15);
+        linkedListNode1.next.next.next.next.next = new Node(1);
         boolean res = isPalindrome(linkedListNode1);
         System.out.println("isPalindrome:" + res);
     }

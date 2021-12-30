@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 //https://leetcode.com/problems/combination-sum-ii/
+//tc-O(2^N * k), k is the max length of sub arrays
 public class CombinationSum2 {
 
     public static void main(String[] args) {
@@ -34,6 +35,7 @@ public class CombinationSum2 {
         }
 
         for (int i = ind; i < arr.length; i++) {
+            //if elements at index 3 and 4 are same, take only one at index 3
             if (i > ind && arr[i] == arr[i - 1]) {
                 continue;
             }

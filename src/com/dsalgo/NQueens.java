@@ -12,7 +12,7 @@ public class NQueens {
         List<List<String>> result = solveNQueensEfficient(4);
         result.forEach(l -> {
             System.out.println();
-            l.forEach(s -> System.out.print(s));
+            l.forEach(System.out::print);
         });
     }
 

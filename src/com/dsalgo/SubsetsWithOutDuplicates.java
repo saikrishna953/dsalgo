@@ -6,19 +6,19 @@ import java.util.List;
 
 //time-
 //space-
-public class SubsetSumsWithDuplicates {
+public class SubsetsWithOutDuplicates {
 
     public static void main(String[] args) {
         int[] arr = {1, 3, 2, 2, 3, 2};
 
-        List<List<Integer>> result = subsetSums(arr, arr.length);
+        List<List<Integer>> result = subsets(arr, arr.length);
         result.forEach(l -> {
             System.out.println();
             l.forEach(s -> System.out.print(s + " "));
         });
     }
 
-    private static List<List<Integer>> subsetSums(int[] arr, int N) {
+    private static List<List<Integer>> subsets(int[] arr, int N) {
 
         //to have duplicates in order
         Arrays.sort(arr);

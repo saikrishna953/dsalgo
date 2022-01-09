@@ -14,7 +14,7 @@ public class AppearsOnceInSortedArray {
     private static int findSingleElementInSortedArrayEfficient(int[] arr) {
 
         int low = 0;
-        //-2 because last element can be the required element
+        //arr.length - 2 because last element can be the required element
         int high = arr.length - 2;
         while (low <= high) {
             int mid = (low + high) >> 1;

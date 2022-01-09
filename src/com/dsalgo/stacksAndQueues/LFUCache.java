@@ -59,6 +59,15 @@ public class LFUCache {
         }
     }
 
+    public int get(int key) {
+        DLLNode curNode = cache.get(key);
+        if (curNode == null) {
+            return -1;
+        }
+        updateNode(curNode);
+        return curNode.value;
+    }
+
     private void updateNode(DLLNode currNode) {
 
         int currFrequency = currNode.frequency;

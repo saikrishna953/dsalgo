@@ -1,4 +1,4 @@
-package com.dsalgo;
+package com.dsalgo.linkedlist;
 
 //https://leetcode.com/problems/rotate-list/description/
 public class RotateLL {
@@ -16,21 +16,21 @@ public class RotateLL {
 
         Node linkedListNode1 = new Node(1);
         linkedListNode1.next = new Node(2);
-        linkedListNode1.next.next = new Node(8);
+       /* linkedListNode1.next.next = new Node(8);
         linkedListNode1.next.next.next = new Node(7);
         linkedListNode1.next.next.next.next = new Node(6);
-        linkedListNode1.next.next.next.next.next = new Node(10);
+        linkedListNode1.next.next.next.next.next = new Node(10);*/
 
         System.out.println("Before rotation");
         printLL(linkedListNode1);
         System.out.println();
         System.out.println("After rotation");
-        Node res = rotateLL(linkedListNode1,2);
+        Node res = rotateLL(linkedListNode1,1);
         printLL(res);
     }
 
     private static Node rotateLL(Node head, int k) {
-        if(head == null || head.next == null || k==1){
+        if(head == null || head.next == null ){
             return head;
         }
 

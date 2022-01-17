@@ -1,14 +1,14 @@
-package com.dsalgo;
+package com.dsalgo.linkedlist;
 
 public class PalindromeLL {
 
     public static void main(String[] args) {
         Node linkedListNode1 = new Node(1);
         linkedListNode1.next = new Node(2);
-        linkedListNode1.next.next = new Node(3);
+       /* linkedListNode1.next.next = new Node(3);
         linkedListNode1.next.next.next = new Node(3);
         linkedListNode1.next.next.next.next = new Node(2);
-        linkedListNode1.next.next.next.next.next = new Node(1);
+        linkedListNode1.next.next.next.next.next = new Node(1);*/
         boolean res = isPalindrome(linkedListNode1);
         System.out.println("isPalindrome:" + res);
     }
@@ -22,7 +22,7 @@ public class PalindromeLL {
         Node fast = head;
         while (fast.next != null && fast.next.next != null) {
             slow = slow.next;
-            fast = fast.next;
+            fast = fast.next.next;
         }
         slow.next = reverseLL(slow.next);
         slow = slow.next;

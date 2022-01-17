@@ -1,4 +1,4 @@
-package com.dsalgo;
+package com.dsalgo.linkedlist;
 
 public class DetectCycleInLL {
     public static void main(String[] args) {

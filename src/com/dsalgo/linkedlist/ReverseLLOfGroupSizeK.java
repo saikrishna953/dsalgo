@@ -1,17 +1,17 @@
-package com.dsalgo;
+package com.dsalgo.linkedlist;
 
 public class ReverseLLOfGroupSizeK {
 
     public static void main(String[] args) {
         Node linkedListNode = new Node(1);
         linkedListNode.next = new Node(2);
-        linkedListNode.next.next = new Node(3);
+        /*linkedListNode.next.next = new Node(3);
         linkedListNode.next.next.next = new Node(4);
         linkedListNode.next.next.next.next = new Node(5);
         linkedListNode.next.next.next.next.next = new Node(6);
         linkedListNode.next.next.next.next.next.next = new Node(7);
-        linkedListNode.next.next.next.next.next.next.next = new Node(8);
-        Node newHead = reverseLinkedListOfSizeK(linkedListNode, 3);
+        linkedListNode.next.next.next.next.next.next.next = new Node(8);*/
+        Node newHead = reverseLinkedListOfSizeK(linkedListNode, 2);
         while (newHead != null) {
             System.out.println(newHead.val);
             newHead = newHead.next;

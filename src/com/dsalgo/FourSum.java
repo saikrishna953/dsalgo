@@ -3,6 +3,7 @@ package com.dsalgo;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 //o(n^3)-time complexity
 public class FourSum {
 
@@ -31,7 +32,7 @@ public class FourSum {
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
-                int target_2 = Math.abs(target - arr[i] - arr[j]);
+                int target_2 = target - arr[i] - arr[j];
                 int front = j + 1;
                 int back = arr.length - 1;
                 while (front < back) {
@@ -59,11 +60,11 @@ public class FourSum {
                     }
                 }
 
-                while((j+1 < arr.length) && arr[j+1]==arr[j]){
+                while ((j + 1 < arr.length) && arr[j + 1] == arr[j]) {
                     ++j;
                 }
             }
-            while((i+1 < arr.length) && arr[i+1]==arr[i]){
+            while ((i + 1 < arr.length) && arr[i + 1] == arr[i]) {
                 ++i;
             }
 

@@ -1,20 +1,21 @@
-package com.dsalgo;
+package com.dsalgo.linkedlist;
 
 public class IntersectionOfTwoLL {
     public static void main(String[] args) {
         Node linkedListNode1 = new Node(1);
-        linkedListNode1.next = new Node(2);
+        /*linkedListNode1.next = new Node(2);
         linkedListNode1.next.next = new Node(8);
         linkedListNode1.next.next.next = new Node(7);
-        linkedListNode1.next.next.next.next = new Node(6);
+        linkedListNode1.next.next.next.next = new Node(6);*/
 
-        Node linkedListNode2 = new Node(2);
-        linkedListNode2.next = new Node(8);
+        Node linkedListNode2 = linkedListNode1;
+       /* Node linkedListNode2 = new Node(1);
+       /* linkedListNode2.next = new Node(8);
         linkedListNode2.next.next = new Node(1);
         linkedListNode2.next.next.next = new Node(3);
         linkedListNode2.next.next.next.next = linkedListNode1.next.next;
         linkedListNode2.next.next.next.next.next = linkedListNode1.next.next.next;
-        linkedListNode2.next.next.next.next.next.next = linkedListNode1.next.next.next.next;
+        linkedListNode2.next.next.next.next.next.next = linkedListNode1.next.next.next.next;*/
 
 
         Node intersection = findIntersection(linkedListNode1, linkedListNode2);

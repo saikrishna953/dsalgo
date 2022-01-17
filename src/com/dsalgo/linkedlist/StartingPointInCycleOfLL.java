@@ -1,4 +1,4 @@
-package com.dsalgo;
+package com.dsalgo.linkedlist;
 
 //https://leetcode.com/problems/linked-list-cycle-ii/
 //o(n)-time complexity

@@ -6,7 +6,7 @@ public class FindRepeatAndMissingNumber {
         int[] arr = {4, 3, 4, 2, 5};
 
         //1st problem
-        findRepeatAndMissingElement1(arr);
+        //findRepeatAndMissingElement1(arr);
         findRepeatAndMissingElement2(arr);
 
     }

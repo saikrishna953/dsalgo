@@ -1,4 +1,4 @@
-package com.dsalgo;
+package com.dsalgo.linkedlist;
 
 //https://www.geeksforgeeks.org/a-linked-list-with-next-and-arbit-pointer/
 public class CloneLL {
@@ -58,7 +58,7 @@ public class CloneLL {
         iter = head;
         while (iter != null) {
             if (iter.random != null) {
-                iter.next.random = iter.random;
+                iter.next.random = iter.random.next;
             }
             iter = iter.next.next;
         }

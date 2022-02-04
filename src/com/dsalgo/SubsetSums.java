@@ -25,7 +25,7 @@ public class SubsetSums {
 
     private static void func(int ind, int sum, int[] arr, int N, List<Integer> subsets) {
 
-        if (ind == N) {
+        if (ind >= N) {
             subsets.add(sum);
             return;
         }

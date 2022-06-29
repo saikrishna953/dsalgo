@@ -15,6 +15,7 @@ public class ImplementQueueUsingArray {
         System.out.println("Popped element is " + queueDs.pop());
         System.out.println("Top element is " + queueDs.top());
         System.out.println("Size " + queueDs.size());
+        System.out.println(1%10);
     }
 
     static class QueueDs {

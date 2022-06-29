@@ -2,7 +2,7 @@ package com.dsalgo.stacksAndQueues;
 
 import java.util.Stack;
 
-//https://www.geeksforgeeks.org/the-celebrity-problem/
+// https://www.geeksforgeeks.org/the-celebrity-problem/
 //tc-o(n)
 public class Celebrity {
     public static void main(String[] args) {

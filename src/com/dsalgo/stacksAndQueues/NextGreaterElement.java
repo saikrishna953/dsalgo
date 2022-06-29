@@ -2,6 +2,10 @@ package com.dsalgo.stacksAndQueues;
 
 import java.util.Stack;
 
+/*Given an array, print the Next Greater Element (NGE) for every element.
+The Next greater Element for an element x is the first greater element on the
+right side of x in the array. Elements for which no greater element exist,
+consider the next greater element as -1.*/
 public class NextGreaterElement {
 
     public static void main(String[] args) {
@@ -20,19 +24,13 @@ public class NextGreaterElement {
         int n = arr.length;
         int[] nge = new int[n];
 
-        for (int i = 2 * n - 1; i >= 0; i--) {
+        for (int i = n - 1; i >= 0; i--) {
 
-            while (!stack.isEmpty() && stack.peek() <= arr[i % n]) {
+            while (!stack.isEmpty() && stack.peek() <= arr[i]) {
                 stack.pop();
             }
-            if (i < n) {
-                if (!stack.isEmpty()) {
-                    nge[i] = stack.peek();
-                } else {
-                    nge[i] = -1;
-                }
-            }
-            stack.push(arr[i % n]);
+            nge[i] = stack.empty() ? -1 : stack.peek();
+            stack.push(arr[i]);
 
         }
         return nge;

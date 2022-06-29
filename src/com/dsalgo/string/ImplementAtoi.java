@@ -4,7 +4,7 @@ public class ImplementAtoi {
 
     public static void main(String[] args) {
         ImplementAtoi i = new ImplementAtoi();
-        int number = i.myAtoi("4193 with words");
+        int number = i.myAtoi("4193 with words 678");
         System.out.println(number);
     }
 

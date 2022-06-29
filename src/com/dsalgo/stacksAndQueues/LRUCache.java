@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 //https://leetcode.com/problems/lru-cache/
+//Least recently used
 public class LRUCache {
 
     static Node head, tail;

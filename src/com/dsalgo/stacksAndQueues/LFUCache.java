@@ -5,6 +5,7 @@ import java.util.Map;
 
 
 //https://leetcode.com/problems/lfu-cache/
+//Least frequently used cache
 public class LFUCache {
 
     static class DLLNode {

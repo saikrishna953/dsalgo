@@ -17,7 +17,6 @@ public class Dijkstras {
 
         PriorityQueue<Node> pq = new PriorityQueue<Node>(N, new Node());
         pq.add(new Node(s, 0));
-
         while (pq.size() > 0) {
             Node node = pq.poll();
 

@@ -27,7 +27,7 @@ public class SearchIn2DMatrix {
 
             int start = 0, end = colLength;
             while (start <= end) { // using binary search algorithm to search through the row for the target
-                int mid = start + (end - start) / 2;
+                int mid = (start + end) / 2;
                 System.out.println(mid);
                 if (matrix[i][mid] == target) return true;
 

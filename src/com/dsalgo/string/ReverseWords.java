@@ -3,7 +3,7 @@ package com.dsalgo.string;
 public class ReverseWords {
 
     public static void main(String[] args) {
-        String s = "  hello world  ";
+        String s = "  h world  ";
         String result = solution(s);
         System.out.println(result);
     }

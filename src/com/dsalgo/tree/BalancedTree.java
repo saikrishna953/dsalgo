@@ -1,5 +1,6 @@
 package com.dsalgo.tree;
 
+//https://takeuforward.org/data-structure/check-if-the-binary-tree-is-balanced-binary-tree/
 public class BalancedTree {
 
     public static void main(String[] args) {

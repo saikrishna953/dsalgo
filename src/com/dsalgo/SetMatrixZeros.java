@@ -2,6 +2,7 @@ package com.dsalgo;
 
 import java.util.Arrays;
 
+//https://leetcode.com/problems/set-matrix-zeroes/
 public class SetMatrixZeros {
 
     public static void main(String[] args) {

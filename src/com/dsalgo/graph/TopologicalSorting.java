@@ -14,6 +14,35 @@ public class TopologicalSorting {
         g.addEdge(3, 1);
 
         topologicalSorting(g);
+
+        foo(null);
+        Car a = new Car("red");
+        Car b = new Car("yellow");
+        swap(a,b);
+        System.out.println(a.color);
+        System.out.println(b.color);
+
+    }
+
+    private static void swap(Car a, Car b) {
+        Car tmp = a;
+        a=b;
+        b=tmp;
+    }
+
+    static class Car{
+        String color;
+        Car(String c){
+            this.color = c;
+        }
+    }
+
+    private static void foo(Object o) {
+        System.out.println("print object");
+    }
+
+    private static void foo(String o) {
+        System.out.println("print string");
     }
 
     private static void topologicalSorting(Graph g) {

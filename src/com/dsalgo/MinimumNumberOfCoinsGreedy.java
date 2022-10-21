@@ -1,6 +1,7 @@
 package com.dsalgo;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MinimumNumberOfCoinsGreedy {
@@ -28,4 +29,25 @@ public class MinimumNumberOfCoinsGreedy {
         return ans.size();
 
     }
+
+    private static int findMinNoOfCoins(int[] arr, int l,int D) {
+
+        if(D == 0){
+            return 0;
+        }
+
+        int res = Integer.MAX_VALUE;
+        Arrays.sort(arr);
+
+        for (int i = l-1; i>=0; i--) {
+            if(arr[i] <= D){
+                int s = findMinNoOfCoins(arr,l,D-arr[i]);
+                if(s != Integer.MAX_VALUE && (s+1)<res){
+                    res = s+1;
+                }
+            }
+        }
+        return res;
+    }
+
 }
